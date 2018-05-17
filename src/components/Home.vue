@@ -12,6 +12,9 @@
       <v-flex xs12 class="text-xs-center" mt-3>
         <p>This is a user's home page</p>
       </v-flex>
+      <v-flex xs12 class="text-xs-center" mt-3>
+        {{ info }}
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
