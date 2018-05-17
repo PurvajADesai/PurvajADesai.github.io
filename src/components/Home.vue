@@ -13,7 +13,7 @@
         <p>This is a user's home page</p>
       </v-flex>
       <v-flex xs12 class="text-xs-center" mt-3>
-        {{ info }}
+        <p>{{ status }}<p>
       </v-flex>
     </v-layout>
   </v-container>
@@ -31,7 +31,8 @@ export default {
         ],
         center:{lat:21.7679 ,lng:78.8718},
         markers:[{
-          position:{lat:21.7679,lng:78.8718}
+          position:{lat:21.7679,lng:78.8718},
+          
         }]
       }
     }
