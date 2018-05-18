@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Home from './components/Home'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
@@ -30,22 +31,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
-})
-var vm = new Vue({
-  el:'#app1',
-  data:{
-    status:''
-  },
-  created: function(){
-    this.loadQuote();
-  },
-methods:{
-  loadQuote: function(){
-  this.status='Loading.......';
-  var vm=this;
-  axios
-    .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-    .then(response => (this.status= response))
-  }
-}
 })
